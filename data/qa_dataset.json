@@ -1,0 +1,77 @@
+[
+    {
+        "context": "Hugging Face provides pre-trained models and APIs for NLP tasks.",
+        "question": "What does Hugging Face provide?",
+        "answer": "Pre-trained models and APIs for NLP tasks."
+    },
+    {
+        "context": "LangChain is an open-source library for chaining LLMs together.",
+        "question": "What is LangChain used for?",
+        "answer": "Chaining LLMs for advanced AI applications."
+    },
+    {
+        "context": "Transformers are a type of model architecture that has revolutionized NLP.",
+        "question": "What has revolutionized NLP?",
+        "answer": "Transformers."
+    },
+    {
+        "context": "PyTorch is an open-source machine learning library based on the Torch library.",
+        "question": "What is PyTorch based on?",
+        "answer": "The Torch library."
+    },
+    {
+        "context": "Fine-tuning is the process of taking a pre-trained model and training it on a specific task.",
+        "question": "What is fine-tuning?",
+        "answer": "The process of taking a pre-trained model and training it on a specific task."
+    },
+    {
+        "context": "The BERT model is designed to understand the context of a word in search queries.",
+        "question": "What is the purpose of the BERT model?",
+        "answer": "To understand the context of a word in search queries."
+    },
+    {
+        "context": "OpenAI's GPT-3 is a state-of-the-art language generation model.",
+        "question": "What is GPT-3?",
+        "answer": "A state-of-the-art language generation model."
+    },
+    {
+        "context": "Natural Language Processing (NLP) is a field of AI that focuses on the interaction between computers and humans through natural language.",
+        "question": "What does NLP stand for?",
+        "answer": "Natural Language Processing."
+    },
+    {
+        "context": "Reinforcement learning is an area of machine learning concerned with how software agents ought to take actions in an environment to maximize some notion of cumulative reward.",
+        "question": "What is reinforcement learning concerned with?",
+        "answer": "How software agents ought to take actions in an environment to maximize cumulative reward."
+    },
+    {
+        "context": "The attention mechanism allows models to focus on specific parts of the input sequence.",
+        "question": "What does the attention mechanism do?",
+        "answer": "Allows models to focus on specific parts of the input sequence."
+    },
+    {
+        "context": "Data preprocessing is a crucial step in the machine learning pipeline.",
+        "question": "Why is data preprocessing important?",
+        "answer": "It is a crucial step in the machine learning pipeline."
+    },
+    {
+        "context": "Transfer learning is a technique where a model developed for a particular task is reused as the starting point for a model on a second task.",
+        "question": "What is transfer learning?",
+        "answer": "A technique where a model developed for a particular task is reused for a second task."
+    },
+    {
+        "context": "The F1 score is a measure of a model's accuracy that considers both the precision and the recall.",
+        "question": "What does the F1 score measure?",
+        "answer": "A model's accuracy considering both precision and recall."
+    },
+    {
+        "context": "Overfitting occurs when a model learns the training data too well, including its noise and outliers.",
+        "question": "What is overfitting?",
+        "answer": "When a model learns the training data too well, including its noise and outliers."
+    },
+    {
+        "context": "A confusion matrix is a table used to evaluate the performance of a classification model.",
+        "question": "What is a confusion matrix used for?",
+        "answer": "To evaluate the performance of a classification model."
+    }
+]
