@@ -22,4 +22,6 @@ def answer_question(question):
     return answer
 
 if __name__ == "__main__":
-    print(answer_question
+    question = "What does Hugging Face provide?"
+    print("Question:", question)
+    print("Answer:", answer_question(question))
