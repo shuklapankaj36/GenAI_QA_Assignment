@@ -1,0 +1,9 @@
+torch
+transformers
+datasets
+fastapi
+uvicorn
+faiss-cpu
+langchain
+streamlit
+requests
