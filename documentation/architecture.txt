@@ -1,0 +1,118 @@
+QA System Architecture Documentation
+====================================
+
+1. SYSTEM OVERVIEW
+------------------
+The system implements a retrieval-augmented question answering pipeline with these key characteristics:
+
+Design Philosophy:
+- Modular architecture for easy component replacement
+- Hybrid approach combining retrieval and generation
+- Focus on explainability through retrieved context
+
+Core Technologies:
+1. BERT (Bidirectional Encoder Representations from Transformers):
+   - Handles natural language understanding
+   - Fine-tuned for extractive QA tasks
+   - Processes question-context pairs
+
+2. FAISS (Facebook AI Similarity Search):
+   - Efficient similarity search library
+   - Indexes document embeddings
+   - Enables fast retrieval of relevant contexts
+
+3. Custom Docstore:
+   - Lightweight document storage
+   - Maps between vector IDs and text content
+   - Supports flexible document management
+
+Workflow:
+1. Question Processing → 2. Context Retrieval → 3. Answer Extraction → 4. Response Generation
+
+2. CORE COMPONENTS
+------------------
+
+2.1 Model Layer
+---------------
+run_inference.py:
+- Main QA inference script
+- Loads either fine-tuned or base BERT model
+- Handles question processing and answer extraction
+
+fine_tune.py:
+- Model training script
+- Implements fine-tuning of BERT on QA tasks
+- Saves checkpoints to model/fine_tuned/
+
+evaluate.py:
+- Model evaluation
+- Computes metrics (F1, exact match)
+- Benchmarks performance
+
+2.2 Data Layer
+--------------
+data/qa_dataset.json:
+- Contains question-context-answer triples
+- Used for training and evaluation
+
+faiss_index/:
+- Stores the vector embeddings index
+- Enables fast similarity search
+
+2.3 Retrieval Layer
+-------------------
+SimpleDocstore:
+- Lightweight document storage
+- Maps document IDs to content
+
+FAISS Integration:
+- Uses HuggingFace embeddings
+- LangChain wrapper for vector operations
+
+3. KEY TECHNICAL DECISIONS
+--------------------------
+Model Choice:
+- BERT-base for balance of performance/size
+- Fine-tuned on domain-specific QA data
+
+Retrieval-Augmented Generation:
+- Combines vector similarity + BERT extraction
+- Benefits: More accurate, explainable results
+
+Error Handling:
+- Graceful fallback to base model
+- Input validation at each stage
+- Clear error messages
+
+4. DATA FLOW
+------------
+1. Question → 
+2. FAISS similarity search → 
+3. Top 3 relevant contexts → 
+4. BERT answer extraction → 
+5. Confidence scoring → 
+6. Response formatting
+
+5. CURRENT LIMITATIONS
+----------------------
+Model Loading:
+- Issues with fine-tuned model files
+- Currently falling back to base BERT
+
+Document Retrieval:
+- Needs better error handling
+- Could improve with hybrid search
+
+Performance:
+- Base model not fine-tuned for QA
+- Limited context window
+
+6. FUTURE IMPROVEMENTS
+----------------------
+- Hybrid search approach
+- Larger context windows
+- Better error handling
+- API endpoint documentation
+- Deployment considerations
+- Performance benchmarks
+- Detailed class diagrams
