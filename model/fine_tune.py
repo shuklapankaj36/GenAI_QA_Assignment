@@ -3,7 +3,7 @@ import torch
 from transformers import BertTokenizer, BertForQuestionAnswering, Trainer, TrainingArguments
 from datasets import Dataset
 
-with open("../data/qa_dataset.json", "r") as f:
+with open("./data/qa_dataset.json", "r") as f:
     data = json.load(f)
 
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
